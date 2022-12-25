@@ -1,0 +1,20 @@
+# Создайте программу для игры в ""Крестики-нолики"".(в консоли происходит выбор позиции)
+# для домашки
+fields = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+def show_fields():
+    global fields  # ввели переменную
+    for i in range(0, len(fields), 3):
+        print(fields[i], fields[i+1], fields[i+2])
+show_fields()
+
+print('Начинаем игру крестики-нолики')
+for i in range (0, 9, 1):
+    if i%2 == 0:
+        a = int(input('Первый игрок, выберите позицию для хода от 1 до 9 = '))
+        fields[a-1] = "X"
+        show_fields()
+    if i%2 != 0:
+        a = int(input('Второй игрок, выберите позицию для хода от 1 до 9 = '))
+        fields[a-1] = "X"
+        show_fields()
+    
